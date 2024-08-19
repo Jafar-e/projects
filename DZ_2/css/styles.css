@@ -1,0 +1,23 @@
+header, main, footer {
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+nav ul {
+    padding: 0;
+    display: block;
+}
+
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+figure {
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin: 10px auto;
+}

@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 20px auto;
+    max-width: 1000px;
+    min-width: 400px;
+    padding: 0 50px;
+}
+
+#menu {
+    margin: 30px auto;
+    background-color: #EEEEEE;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+}
+
+.contacts {
+    padding: 0;
+}
+
+.photo {
+    max-width: 500px;
+}
+.contacts a, .contacts button{
+    margin-right: 5px;
+}

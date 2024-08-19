@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зачетная работа — JS: база+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div><h1>Моя библиотека</h1></div>
+    </header>
+    <main>
+        <section id="editor">
+            <h2>Добавить книгу</h2>
+            <form action="">
+                <div class="formGrid">
+                    <div class="col-2-8">
+                        <label class="text-field__label" for="bookNameFormId">Название:</label>
+                        <input class="text-field__input" type="text" name="bookNameInput" id="bookNameFormId" />
+                    </div>
+                    <div class="col-2-8">
+                        <label class="text-field__label" for="bookPublishingYearFormId">Год издания:</label>
+                        <input class="text-field__input" type="number" min="0" max="2024" name="bookPublishingYearInput" id="bookPublishingYearFormId" />
+                    </div>
+                    <div class="col-2-8">
+                        <label class="text-field__label" for="bookAuthorFormId">Автор:</label>
+                        <input class="text-field__input" type="text" name="bookAuthorInput" id="bookAuthorFormId" />
+                    </div>
+                    <div class="col-4-8">
+                        <label class="text-field__label" for="bookGenreFormId">Жанр:</label>
+                        <input class="text-field__input" type="text" name="bookGenreInput" id="bookGenreFormId" />
+                    </div>
+                    <div class="col-4-8">
+                        <label class="text-field__label" for="bookStatusId">Статус:</label>
+                        <select class="text-field__input" name="bookStatusInput" id="bookStatusId">
+                            <option value="0">Не прочитано</option>
+                            <option value="1">Прочитано</option>
+                        </select>
+                    </div>
+                    <div class="col-8-8 buttonMargin">
+                        <input class="text-field__button" type="button" name="bookAddButton" id="bookGenreFormId" value="Добавить" />
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section id="interface">
+            <div class="heading">
+                <div><h2>Книжная полка</h2></div>
+                <div id="bookCounter">Книг в библиотеке: <span>2</span></div>
+            </div>
+            <article>
+                <div class="doubleHeight"></div>
+                <div class="bookName">Отцы и дети</div>
+                <div class="bookPublishingYear">1862</div>
+                <div class="doubleHeight buttons">
+                    <div class="bookStatus bookStatusTrue"></div>
+                </div>
+                <div class="doubleHeight buttons">
+                    <div class="bookButton buttonEdit"></div>
+                    <div class="bookButton buttonDelete"></div>
+                </div>
+                <div class="bookAuthor">Иван Сергеевич Тургенев</div>
+                <div class="bookGenre">Роман</div>
+            </article>
+            <article>
+                <div class="doubleHeight"></div>
+                <div class="bookName">Горе от ума</div>
+                <div class="bookPublishingYear">1822</div>
+                <div class="doubleHeight buttons">
+                    <div class="bookStatus bookStatusFalse"></div>
+                </div>
+                <div class="doubleHeight buttons">
+                    <div class="bookButton buttonEdit"></div>
+                    <div class="bookButton buttonDelete"></div>
+                </div>
+                <div class="bookAuthor">Александр Сергеевич Грибоедов</div>
+                <div class="bookGenre">Комедия</div>
+            </article>
+        </section>
+        <section id="libraryButtons">
+            <a class="buttonRefresh" href="#">Обновить</a>
+            <a class="buttonDeleteAll" href="#">Удалить все</a>
+        </section>
+    </main>
+    <footer></footer>
+    <script defer src="./js/scripts.js"></script>
+</body>
+</html>

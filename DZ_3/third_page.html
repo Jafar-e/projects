@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение во Frontend</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav id="main_menu">
+            <ul>
+                <li><a href="./index.html#introduction">Введение</a></li>
+                <li>
+                    <a href="./index.html#instruments">
+                        <img src="./images/tool.svg" alt="">
+                        Инструменты
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html#language">
+                        <img src="./images/languages.svg" alt="">
+                        Языки
+                    </a>
+                </li>
+                <li><a href="./second_page.html">История профессии</a></li>
+                <li>
+                    <a href="./third_page.html">
+                        <img src="./images/comment.svg" alt="">
+                        Оставить комментарий
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Оставьте свой отзыв</h1>
+        <form action="" method="get">
+            <label>
+                Имя:
+                <input type="text" name="username" id="usernameid" maxlength="40" placeholder="Иван Федорович" required/>
+            </label>
+            <label>
+                Фамилия:
+                <input type="text" name="surname" id="surnameid" maxlength="40" placeholder="Крузенштерн" required/>
+            </label>
+            <label>
+                Электронная почта:
+                <input type="email" name="usermail" id="usermailid" required/>
+            </label>
+            <label>
+                Дата вашего рождения:
+                <input type="date" name="birthday" id="birthdayid" required/>
+            </label>
+            <label>
+                Стаж в IT:
+                <input type="number" name="experience" id="experienceid" min="1" max="70"/>
+            </label>
+            <label for="commentid">Комментарий:</label>
+            <textarea name="comment" id="commentid" cols="50" rows="10"></textarea>
+            <br />
+            <button type="submit">Отправить</button>
+            <br /><br />
+        </form>
+    </main>
+    <footer>
+        <div id="footer_content">
+            <div>
+                <img src="./images/web-development.svg" alt="SuperNanoTech" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#introduction">Введение</a></li>
+                    <li><a href="./index.html#instruments">Инструменты</a></li>
+                    <li><a href="./index.html#language">Языки</a></li>
+                    <li><a href="./second_page.html">История профессии</a></li>
+                    <li><a href="./third_page.html">Оставить комментарий</a></li>
+                </ul>
+            </nav>
+            <div>
+                <figure>
+                    <figcaption>Наши контакты:</figcaption>
+                    <address>
+                        Телефон сверхгорячей линии:
+                        <a href="tel:88002000600">8 800 2000 600</a>
+                    </address>
+                    <address>
+                        Электрическая почта:
+                        <a href="mailto:solyanikov.b@gmail.com">solyanikov.b@gmail.com</a>
+                    </address>
+                </figure>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

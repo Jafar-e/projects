@@ -1,0 +1,229 @@
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    color: #424242;
+}
+
+a {
+    color:#483d8b;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 15px auto;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+ul li, ol li {
+    margin: 10px auto;
+    position: relative;
+}
+
+ol {
+	list-style-type: none;
+	counter-reset: num;
+	margin: 0 0 0 45px;
+	padding: 15px 0 5px 0;
+	font-size: 16px;
+}
+
+ol li:before {
+	content: counter(num);
+	counter-increment: num;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: -36px;
+	width: 26px;
+	height: 26px;
+	background: #483d8b;
+	color: #ffffff;
+	text-align: center;
+	line-height: 25px;
+	font-size: 16px;
+}
+
+ul.angle li::before {
+    position: absolute;
+    content: url('../images/angle-right.svg');
+    width: 7px;
+    left: -20px;
+}
+
+.uangle {
+    color: #ffffff;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0px;
+    background-color: #483d8b;
+    z-index: 50;
+}
+
+main {
+    width: 800px;
+    margin: 60px auto 0 auto;
+    position: relative;
+}
+
+/*Fix anchor links and margins */
+section#introduction, section#instruments, section#language {
+    padding-top: 40px;
+    margin-top: -60px;
+}
+
+#grid_table {
+    display: grid;
+    margin: 20px auto;
+    grid-template-columns: 15% 35% 25% 25%;
+    width: 100%;
+    border-left: 1px solid #483d8b;
+    border-top: 1px solid #483d8b;
+}
+
+#grid_table>div {
+    border-right: 1px solid #483d8b;
+    border-bottom: 1px solid #483d8b;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#grid_table>div.header {
+    font-weight: bold;
+    color: #424242;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid_table>div.header.long-2 {
+    grid-column: span 2;
+}
+
+#grid_table>div.skill {
+    text-align: left;
+}
+
+#grid_table>div.header.high-5 {
+    grid-row: span 5;
+}
+
+#grid_table>div.header.high-6 {
+    grid-row: span 6;
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    background-color: #483d8b;
+}
+
+footer #footer_content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#main_menu {
+    position: relative;
+    height: 50px;
+    width: 800px;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+#main_menu ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav#main_menu ul li {
+    padding: 0 15px;
+    border-right: 1px solid #7667d3;
+    position: relative;
+    margin: 0;
+}
+
+nav#main_menu ul li:first-child {
+    border-left: 1px solid #7667d3;
+}
+
+nav#main_menu ul li a{
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+nav#main_menu ul li img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+nav#main_menu ul li a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+figure {
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin: 10px auto;
+}
+
+#footer_content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer_content ul {
+    margin: 25px 0px;
+    padding: 0px;
+}
+
+#footer_content div, #footer_content nav {
+    width: 33%;
+    line-height: 24px;
+    color:#7667d3;
+}
+
+#footer_content div a, #footer_content a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#footer_content div  a:hover, #footer_content a:hover {
+    text-decoration: underline;
+}

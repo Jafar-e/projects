@@ -1,0 +1,266 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    margin-top: 110px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    font-family: inherit; /* 1 */
+    font-size: inherit; /* 1 */
+    line-height: inherit; /* 1 */
+    margin: 0; /* 2 */
+}
+
+.text-field {
+    margin-bottom: 1rem;
+}
+
+.buttonMargin {
+    margin-top: 20px !important;
+   }
+
+  .text-field__label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+  .text-field__input {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-field__button {
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color:#473d8c;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.text-field__button:hover {
+    background-color: #584da3;
+}
+
+.text-field__button:active {
+    background-color:#473d8c;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-field__input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #473d8c;
+    top: 0;
+}
+
+header>div {
+    max-width: 960px;
+    height: 75px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+header>div>h1 {
+    margin: 0;
+    line-height: 75px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+}
+
+main {
+    width: 100%;
+}
+
+main>section {
+    max-width: 960px;
+    margin: 55px auto 0 auto;
+}
+
+main>section h2 {
+    font-size: 1.5rem;
+    font-weight:500;
+}
+
+main>section .formGrid {
+    display: grid;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    margin: 0 -10px;
+}
+
+main>section>div.heading {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+main>section>div.heading #bookCounter {
+    color: #473d8c;
+    text-align: right;
+    font-weight: 500;
+}
+
+#interface>article {
+    display: grid;
+    grid-template-columns: 5% 50% 15% 10% 20%;
+    grid-template-rows: 40px 40px;
+    margin-bottom: 1rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%);
+}
+
+#interface>article div{
+    padding: 0.5rem;
+}
+
+#interface>article .doubleHeight {
+    grid-row: span 2;
+    border-left: 1px solid #bdbdbd;
+}
+
+#interface>article .doubleHeight.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#interface>article .doubleHeight:first-child {
+    border: none;
+    border-right: 1px solid #bdbdbd;
+}
+
+#editor .col-2-8 {
+    grid-column: span 4;
+    margin: 5px 10px;
+}
+
+#editor .col-4-8 {
+    grid-column: span 2;
+    margin: 5px 10px;
+}
+
+.col-8-8 {
+    grid-column: span 8;
+    margin: 5px 10px;
+}
+
+.bookName {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.bookPublishingYear {
+    font-size: 1.4rem;
+}
+
+.bookGenre {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+#interface>article div.bookStatus, #interface>article div.bookButton {
+    min-width: 25px;
+    height: 100%;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.bookStatusTrue {
+    background: url("../img/true.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bookStatusFalse {
+    background: url("../img/false.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttonEdit {
+    background: url("../img/edit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttonDelete {
+    background: url("../img/delete.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#libraryButtons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#libraryButtons>a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#libraryButtons .buttonRefresh {
+    color: #473d8c;
+}
+
+#libraryButtons .buttonRefresh::after {
+    content: url("../img/refresh.svg");
+    width: 25px;
+    height: 25px;
+    margin-left: 0.25rem;
+}
+
+#libraryButtons .buttonDeleteAll {
+    color: #b70e0c;
+}
+
+#libraryButtons .buttonDeleteAll::after {
+    content: url("../img/delete.svg");
+    width: 25px;
+    height: 25px;
+    margin-left: 0.5rem;
+}

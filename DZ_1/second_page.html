@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Про HTML, CSS и JavaScript</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="menu">
+            Узнать больше об <a href="#html-anchor">HTML,</a> <a href="#css-anchor">CSS,</a> <a href="#js-anchor">JavaScript</a> или <a href="index.html">Про меня</a>.
+        </div>
+        <div>
+            <h1>Ключевые технологии:</h1>
+            <a name="html-anchor"><h2>HTML</h2></a>
+            <ul>
+                <li><strong>Структура:</strong> Использует теги для определения различных элементов <br />(заголовки, абзацы, изображения, ссылки и т.д.).</li>
+                <li><strong>Атрибуты:</strong> Дополнительные параметры тегов <br />(например, src для &lt;img&gt;, href для &lt;a&gt;).</li>
+                <li><strong>Документная модель:</strong> HTML-документ представляет собой дерево элементов.</li>
+                <li><strong>Версии:</strong> Текущая версия HTML5, включает новые теги и улучшенные функциональные возможности <br />(например, &lt;video&gt;, &lt;audio&gt;, &lt;canvas&gt;).</li>
+                <li><strong>Совместимость:</strong> Поддерживается всеми основными веб-браузерами.</li>
+                <li><strong>Использование:</strong> Основной язык для создания и структурирования веб-страниц и веб-приложений.</li>
+            </ul>
+            <a name="css-anchor"><h2>CSS</h2></a>
+            <ul>
+                <li><strong>CSS (Cascading Style Sheets): </strong>Каскадные таблицы стилей, используются для описания внешнего вида и форматирования веб-страниц.</li>
+                <li><strong>Цель: </strong>Отделение содержимого (HTML) от его представления (CSS).</li>
+                <li><strong>Структура: </strong>Состоит из правил (селекторов и деклараций).</li>
+                <ul>
+                    <li><strong>Селектор: </strong>Определяет, к каким HTML-элементам применяется стиль.</li>
+                    <li><strong>Декларация: </strong>Состоит из свойства и значения, определяющих стиль <br />(например, color: red;).</li>
+                </ul>
+                <li><strong>Способы включения CSS:</strong>
+                    <ul>
+                        <li><strong>Внешние таблицы стилей: </strong>Подключаются с помощью тега &lt;link&gt; в &lt;head&gt; <br />(например, &lt;link rel="stylesheet" href="styles.css"&gt;).</li>
+                        <li><strong>Внутренние таблицы стилей: </strong>Встраиваются в HTML-документ с помощью тега &lt;style&gt; в &lt;head&gt;.</li>
+                        <li><strong>Встроенные стили: </strong>Определяются непосредственно в атрибутах HTML-элементов <br />(например, &lt;div style="color: red;"&gt;).</li>
+                    </ul>
+                </li>
+                <li><strong>Основные свойства:</strong>
+                    <ul>
+                        <li><strong>Цвет и фон: </strong>color, background-color, background-image.</li>
+                        <li><strong>Текст: </strong>font-family, font-size, text-align, line-height.</li>
+                        <li><strong>Блоки: </strong>margin, padding, border, width, height.</li>
+                        <li><strong>Расположение: p</strong>osition, display, float, flex.</li>
+                    </ul>
+                </li>
+                <li><strong>Каскадирование: </strong>Принцип, по которому стили применяются в зависимости от их источника и специфичности <br />(внешний, внутренний, встроенный).</li>
+                <li><strong>Наследование: </strong>Некоторые свойства наследуются от родительских элементов <br />(например, color, font-family).</li>
+                <li><strong>Специфичность: </strong>Приоритет стилей определяется по уровню специфичности селектора.</li>
+                <li><strong>Медиазапросы: </strong>Позволяют адаптировать стили под разные устройства и размеры экранов <br />(например, @media (max-width: 600px) { ... }).</li>
+                <li><strong>Версии: </strong>Текущая версия CSS3, включает новые возможности и улучшенные свойства <br />(например, градиенты, тени, анимации).</li>
+                <li><strong>Поддержка: </strong>Поддерживается всеми основными веб-браузерами.</li>
+            </ul>
+            <a name="js-anchor"><h2>JavaScript</h2></a>
+            <ul>
+                <li><strong>JavaScript: </strong>Скриптовый язык программирования, используемый для создания динамического и интерактивного веб-контента.</li>
+                <li><strong>Типы данных: </strong>Основные типы данных включают Number, String, Boolean, Object, Null, Undefined, Symbol, и BigInt.</li>
+                <li><strong>Переменные: </strong>Используются для хранения данных; объявляются с помощью var, let, и const.</li>
+                <li><strong>Функции: </strong>Блоки кода, которые выполняют определенные задачи и могут быть вызваны при необходимости.
+                    <ul>
+                        <li><strong>Объявление функции: </strong>function myFunction() { /* код */ }</li>
+                        <li><strong>Стрелочные функции: </strong>const myFunction = () => { /* код */ }</li>
+                    </ul>
+                </li>
+                <li><strong>Объекты и массивы:</strong>
+                    <ul>
+                        <li><strong>Объекты: </strong>Коллекции пар ключ-значение, например, const obj = { key: 'value' };</li>
+                        <li><strong>Массивы: </strong>Упорядоченные списки элементов, например, const arr = [1, 2, 3];</li>
+                    </ul>
+                </li>
+                <li><strong>Условия: </strong>if, else if, else для выполнения кода на основе условий.</li>
+                <li><strong>Циклы: </strong>for, while, do...while для повторения выполнения кода.</li>
+                <li><strong>DOM </strong>(Document Object Model): Интерфейс для взаимодействия с HTML и CSS, позволяет изменять структуру, стиль и содержание веб-страниц.
+                    <ul>
+                        <li><strong>Доступ к элементам: </strong>document.getElementById('id'), document.querySelector('.class')</li>
+                        <li><strong>Изменение элементов: </strong>element.innerHTML, element.style.property</li>
+                    </ul>
+                </li>
+                <li><strong>События: </strong>Механизм для реакции на действия пользователя или изменения состояния <br />(например, click, mouseover).</li>
+                    <ul><li><strong>Обработчики событий: </strong>element.addEventListener('event', function)</li></ul>
+                <li><strong>Асинхронное программирование:</strong>
+                    <ul>
+                        <li><strong>Колбэки: </strong>Функции, передаваемые в другие функции для выполнения позже.</li>
+                        <li><strong>Промисы: </strong>Объекты, представляющие завершение или неудачу асинхронной операции <br />(например, fetch API).</li>
+                        <li><strong>async/await: </strong>Синтаксический сахар для работы с промисами, делает код более читаемым.</li>
+                    </ul>
+                </li>
+                <li><strong>JSON (JavaScript Object Notation): </strong>Формат обмена данными, используемый для передачи данных между сервером и клиентом.</li>
+                <li><strong>Библиотеки и фреймворки: </strong>Популярные инструменты для упрощения разработки <br />(например, jQuery, React, Angular, Vue.js).</li>
+                <li><strong>Поддержка: </strong>JavaScript поддерживается всеми основными веб-браузерами и часто используется в комбинации с HTML и CSS для создания веб-приложений.</li>
+            </ul>
+        </div>
+    </body>
+</html>
