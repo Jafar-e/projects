@@ -3,7 +3,7 @@ let libraryArray = JSON.parse(localStorage.getItem('library')) || [];
 document.getElementById("bookAddButton").onclick = getBookInfo;
 document.getElementById("books").addEventListener('click', (event) => {
     if (event.target.classList.value === "bookButton buttonEdit") {
-        console.log("Редактировать "+event.target.closest("article").querySelector(".bookName").innerHTML);
+        getEditBookInfo(event.target.closest("article").querySelector(".bookName").innerHTML);
     } else if (event.target.classList.value === "bookButton buttonDelete") {
         deleteBook(event.target.closest("article").querySelector(".bookName").innerHTML);
     } else {
@@ -45,7 +45,7 @@ function showLibrary () {
     let booksHTMLCode = "";
 
     libraryArray.forEach((bookObj) => {
-        bookStatusClass = bookObj.status ? "bookStatusTrue" : "bookStatusFalse";
+        let bookStatusClass = bookObj.status ? "bookStatusTrue" : "bookStatusFalse";
         booksHTMLCode += '<article>'+
                         '<div class="doubleHeight"></div>'+
                         '<div class="bookName">'+bookObj.name+'</div>'+
@@ -114,8 +114,53 @@ function getBookInfo () {
     addBook(name, author, year, genre, isRead);
 }
 
+function getEditBookInfo(bookName) {
+    let editedBookName = prompt("Введите новое название:");
+    if (editedBookName) {
+        editBook("name", editedBookName, bookName);
+        let editedBookAuthor = prompt("Новое имя автора:");
+        if (editedBookAuthor) {
+            editBook("author", editedBookAuthor, editedBookName);
+        }
+        let editedBookYear = prompt("Обновите год издания:");
+        if (editedBookYear) {
+            editBook("year", editedBookYear, editedBookName);
+        }
+        let editedBookGenre = prompt("Обновите жанр:");
+        if (editedBookGenre) {
+            editBook("genre", editedBookGenre, editedBookName);
+        }
+        let editedBookStatus = confirm("Вы прочли эту книгу?");
+        if (editedBookStatus) {
+            editBook("status", editedBookStatus, editedBookName);
+        } else {
+            editBook("status", editedBookStatus, editedBookName);
+        }
+    } else {
+        let editedBookAuthor = prompt("Новое имя автора:");
+        if (editedBookAuthor) {
+            editBook("author", editedBookAuthor, bookName);
+        }
+        let editedBookYear = prompt("Обновите год издания:");
+        if (editedBookYear) {
+            editBook("year", editedBookYear, bookName);
+        }
+        let editedBookGenre = prompt("Обновите жанр:");
+        if (editedBookGenre) {
+            editBook("genre", editedBookGenre, bookName);
+        }
+        let editedBookStatus = confirm("Вы прочли эту книгу?");
+        if (editedBookStatus) {
+            editBook("status", editedBookStatus, bookName);
+        } else {
+            editBook("status", editedBookStatus, bookName);
+        }
+    }
+    return;
+}
+
 function addBook (name, author, year, genre, status) {
-    if (libraryArray.find(book => book.name === name) && libraryArray.find(book => book.author === author)) {
+    if (libraryArray.find(book => book.name === name)) {
         alert("Такая книга уже добавлена");
         return;
     }
@@ -134,22 +179,33 @@ function deleteBook (bookName) {
 function filterLibrary(sortType) {
     switch (sortType) {
         case "genre":
-            libraryArray = libraryArray.sort(function(prev, next) {
+            libraryArray = libraryArray.sort((prev, next) => {
                 return prev.genre.localeCompare(next.genre)
             })
             break;
         case "status":
-            libraryArray = libraryArray.sort(function(prev, next) {
+            libraryArray = libraryArray.sort((prev, next) => {
                 return next.status - prev.status;
             })
             break;
         case "both":
-            libraryArray = libraryArray.sort(function(prev, next) {
+            libraryArray = libraryArray.sort((prev, next) => {
                 return prev.genre.localeCompare(next.genre) || next.status - prev.status;
             })
             break;
         default: return;
     }
+    saveLibrary();
+    showLibrary();
+}
+
+function editBook(field, newValue, bookName) {
+    libraryArray = libraryArray.map((book) => {
+        if (book.name === bookName) {
+            book[field] = newValue;
+        }
+        return book;
+    })
     saveLibrary();
     showLibrary();
 }
