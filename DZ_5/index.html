@@ -6,7 +6,7 @@
     <title>Зачетная работа — JS: база+</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
@@ -43,7 +43,7 @@
                         </select>
                     </div>
                     <div class="col-8-8 buttonMargin">
-                        <input class="text-field__button" type="button" name="bookAddButton" id="bookGenreFormId" value="Добавить" />
+                        <input class="text-field__button" type="button" name="bookAddButton" id="bookAddButton" value="Добавить" />
                     </div>
                 </div>
             </form>
@@ -51,43 +51,22 @@
         <section id="interface">
             <div class="heading">
                 <div><h2>Книжная полка</h2></div>
-                <div id="bookCounter">Книг в библиотеке: <span>2</span></div>
+                <div id="bookCounter">Книг в библиотеке: <span>0</span></div>
             </div>
-            <article>
-                <div class="doubleHeight"></div>
-                <div class="bookName">Отцы и дети</div>
-                <div class="bookPublishingYear">1862</div>
-                <div class="doubleHeight buttons">
-                    <div class="bookStatus bookStatusTrue"></div>
-                </div>
-                <div class="doubleHeight buttons">
-                    <div class="bookButton buttonEdit"></div>
-                    <div class="bookButton buttonDelete"></div>
-                </div>
-                <div class="bookAuthor">Иван Сергеевич Тургенев</div>
-                <div class="bookGenre">Роман</div>
-            </article>
-            <article>
-                <div class="doubleHeight"></div>
-                <div class="bookName">Горе от ума</div>
-                <div class="bookPublishingYear">1822</div>
-                <div class="doubleHeight buttons">
-                    <div class="bookStatus bookStatusFalse"></div>
-                </div>
-                <div class="doubleHeight buttons">
-                    <div class="bookButton buttonEdit"></div>
-                    <div class="bookButton buttonDelete"></div>
-                </div>
-                <div class="bookAuthor">Александр Сергеевич Грибоедов</div>
-                <div class="bookGenre">Комедия</div>
-            </article>
+            <div id="books">
+        </div>
         </section>
         <section id="libraryButtons">
+            <span>Сортировать по:</span>
+            <a class="buttonSort genre" href="#">жанру</a>
+            <a class="buttonSort status" href="#">статусу</a>
+            <a class="buttonSort both" href="#">жанру и статусу</a>
+            <span  class="buttonSpacer" >&nbsp;</span>
             <a class="buttonRefresh" href="#">Обновить</a>
             <a class="buttonDeleteAll" href="#">Удалить все</a>
         </section>
     </main>
     <footer></footer>
-    <script defer src="./js/scripts.js"></script>
+    <script defer src="./js/script.js"></script>
 </body>
 </html>

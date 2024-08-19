@@ -136,7 +136,7 @@ main>section>div.heading #bookCounter {
     font-weight: 500;
 }
 
-#interface>article {
+#books>article {
     display: grid;
     grid-template-columns: 5% 50% 15% 10% 20%;
     grid-template-rows: 40px 40px;
@@ -147,16 +147,16 @@ main>section>div.heading #bookCounter {
     background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%);
 }
 
-#interface>article div{
+#books>article div{
     padding: 0.5rem;
 }
 
-#interface>article .doubleHeight {
+#books>article .doubleHeight {
     grid-row: span 2;
     border-left: 1px solid #bdbdbd;
 }
 
-#interface>article .doubleHeight.buttons {
+#books>article .doubleHeight.buttons {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -164,7 +164,7 @@ main>section>div.heading #bookCounter {
     padding: 0 2rem;
 }
 
-#interface>article .doubleHeight:first-child {
+#books>article .doubleHeight:first-child {
     border: none;
     border-right: 1px solid #bdbdbd;
 }
@@ -198,10 +198,9 @@ main>section>div.heading #bookCounter {
     font-weight: 600;
 }
 
-#interface>article div.bookStatus, #interface>article div.bookButton {
+#books>article div.bookStatus, #books>article div.bookButton {
     min-width: 25px;
     height: 100%;
-    cursor: pointer;
     padding: 0px;
 }
 
@@ -221,12 +220,14 @@ main>section>div.heading #bookCounter {
     background: url("../img/edit.svg");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 .buttonDelete {
     background: url("../img/delete.svg");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 #libraryButtons {
@@ -241,14 +242,26 @@ main>section>div.heading #bookCounter {
     align-items: center;
     text-decoration: none;
     font-weight: 500;
+    text-wrap: nowrap;
 }
 
-#libraryButtons .buttonRefresh {
+#libraryButtons .buttonRefresh, #libraryButtons .buttonSort {
     color: #473d8c;
+}
+
+#libraryButtons .buttonSpacer {
+    width: 70px;
 }
 
 #libraryButtons .buttonRefresh::after {
     content: url("../img/refresh.svg");
+    width: 25px;
+    height: 25px;
+    margin-left: 0.25rem;
+}
+
+#libraryButtons .buttonSort::after {
+    content: url("../img/sort.svg");
     width: 25px;
     height: 25px;
     margin-left: 0.25rem;
