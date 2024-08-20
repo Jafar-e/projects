@@ -116,6 +116,10 @@ function getBookInfo () {
 
 function getEditBookInfo(bookName) {
     let editedBookName = prompt("Введите новое название:");
+    if (libraryArray.find(book => book.name === editedBookName)) {
+        alert("Такая книга уже добавлена");
+        return;
+    }
     if (editedBookName) {
         editBook("name", editedBookName, bookName);
         let editedBookAuthor = prompt("Новое имя автора:");
@@ -123,8 +127,10 @@ function getEditBookInfo(bookName) {
             editBook("author", editedBookAuthor, editedBookName);
         }
         let editedBookYear = prompt("Обновите год издания:");
-        if (editedBookYear) {
+        if (editedBookYear   && !isNaN(editedBookYear) && editedBookYear>=0 && editedBookYear<=2024 ) {
             editBook("year", editedBookYear, editedBookName);
+        } else {
+            alert("Год издания должен быть числом от 0 до 2024 \n Этот параметр не будет изменен");
         }
         let editedBookGenre = prompt("Обновите жанр:");
         if (editedBookGenre) {
@@ -142,8 +148,10 @@ function getEditBookInfo(bookName) {
             editBook("author", editedBookAuthor, bookName);
         }
         let editedBookYear = prompt("Обновите год издания:");
-        if (editedBookYear) {
+        if (editedBookYear  && !isNaN(editedBookYear) && editedBookYear>=0 && editedBookYear<=2024) {
             editBook("year", editedBookYear, bookName);
+        } else {
+            alert("Год издания должен быть числом от 0 до 2024 \n Этот параметр не будет изменен");
         }
         let editedBookGenre = prompt("Обновите жанр:");
         if (editedBookGenre) {
