@@ -130,7 +130,7 @@ function getEditBookInfo(bookName) {
         if (editedBookYear   && !isNaN(editedBookYear) && editedBookYear>=0 && editedBookYear<=2024 ) {
             editBook("year", editedBookYear, editedBookName);
         } else {
-            alert("Год издания должен быть числом от 0 до 2024 \n Этот параметр не будет изменен");
+            alert("Год издания должен быть числом от 0 до 2024 \nЭтот параметр не будет изменен");
         }
         let editedBookGenre = prompt("Обновите жанр:");
         if (editedBookGenre) {
@@ -151,7 +151,7 @@ function getEditBookInfo(bookName) {
         if (editedBookYear  && !isNaN(editedBookYear) && editedBookYear>=0 && editedBookYear<=2024) {
             editBook("year", editedBookYear, bookName);
         } else {
-            alert("Год издания должен быть числом от 0 до 2024 \n Этот параметр не будет изменен");
+            alert("Год издания должен быть числом от 0 до 2024 \nЭтот параметр не будет изменен");
         }
         let editedBookGenre = prompt("Обновите жанр:");
         if (editedBookGenre) {
