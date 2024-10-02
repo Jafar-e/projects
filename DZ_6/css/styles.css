@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: rgb(11, 29, 38);
+    --main-accent-color: rgb(251, 215, 132);
+    --main-text-color: rgb(255, 255, 255);
+    --half-text-color: rgba(255,255,255, 0.5)
+    --transparent-text-color: rgba(255,255,255, 0.1)
+  }
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+header {
+    min-height: 1900px;
+    background-image: url("../images/bg.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header>nav {
+    display: flex;
+    max-width: 1760px;
+    margin: 0 auto;
+    height: 37px;
+    justify-content: space-between;
+    margin-top: 64px;
+}
