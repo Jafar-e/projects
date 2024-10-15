@@ -105,11 +105,13 @@ body {
 
 header {
   min-height: 1900px;
+  max-width: 1920px;
   background-image: url(../images/bg.png);
   background-position: left 50% top 0px;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 62px 70px 0 70px;
+  padding: 62px 0px 0 0px;
+  margin: auto;
 }
 
 header>nav {
@@ -119,12 +121,17 @@ header>nav {
   justify-content: space-between;
   font-weight: bold;
   line-height: 37px;
+  max-width: 1762px;
 }
 
 header>nav #navLogo {
+  margin-left: 2px;
+}
+
+header>nav #navLogo a {
+  display: block;
   width: 115px;
   height: 37px;
-  margin-left: 2px;
 }
 
 header>nav>div>ul {
@@ -160,7 +167,7 @@ header>nav>div>ul li:hover a::after {
 header>nav #navAccount {
   width: 115px;
   height: 37px;
-  margin-right: 4px;
+  margin-right: 2px;
   text-align: right;
 }
 
@@ -184,12 +191,13 @@ header>nav #navAccount {
 }
 
 header section#sectionContent {
+  margin: 0 auto;
   margin-top: 190px;
   width: 100%;
   display: grid;
   grid-template-columns: 115px auto 115px;
-  flex-direction: row;
   justify-content: space-between;
+  max-width: 1762px;
 }
 
 header section#sectionContent h1 {
@@ -484,4 +492,8 @@ body>footer ul li {
   line-height: 1.8rem;
   margin-bottom: 30px;
   letter-spacing: 0.03rem;
+}
+
+@media (max-width: 1537px) {
+  
 }
